@@ -3,6 +3,7 @@ import { Sequelize } from "sequelize-typescript";
 import { clientsRoute } from "./routes/clients.route";
 import { productsRoute } from "./routes/products.route";
 import { checkoutRoute } from "./routes/checkout.route";
+import { invoiceRoute } from "./routes/invoice.route";
 import { ClientModel } from "../../modules/client-adm/repository/client.model";
 import { ProductModel as ProductAdmModel } from "../../modules/product-adm/repository/product.model";
 import ProductModel from "../../modules/store-catalog/repository/product.model";
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use("/clients", clientsRoute);
 app.use("/products", productsRoute);
 app.use("/checkout", checkoutRoute);
+app.use("/invoice", invoiceRoute);
 
 export let sequelize: Sequelize;
 
