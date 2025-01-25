@@ -45,7 +45,7 @@ export default class PlaceOrderUseCase implements UseCaseInterface {
       id: new Id(client.id),
       name: client.name,
       email: client.email,
-      address: client.address,
+      address: client.address.street,
     });
 
     const order = new Order({
