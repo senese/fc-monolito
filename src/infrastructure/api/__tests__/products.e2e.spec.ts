@@ -21,6 +21,7 @@ describe("E2E test for products", () => {
     
     // Initialize models
     await sequelize.addModels([ProductModel, ProductAdmModel]);
+    await sequelize.sync()
     
     // Run migrations
     migration = migrator(sequelize);
